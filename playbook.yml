@@ -1,0 +1,9 @@
+---
+- name: Deploy web application on Kubernetes
+  hosts: kubernetes
+  become: false
+  vars:
+    kubeconfig_path: ./kubeconfig.yaml 
+  roles:
+    - nginx
+

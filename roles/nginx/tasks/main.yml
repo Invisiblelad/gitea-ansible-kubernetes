@@ -1,0 +1,18 @@
+---
+- name: Create Namespace
+  k8s:
+    state: present
+    kubeconfig: "{{ Kubeconfig }}"  
+    definition: "{{ lookup('template', 'namespace.yml.j2') }}"
+
+- name: Create Web Deployment
+  k8s:
+    state: present
+    kubeconfig: "{{ Kubeconfig }}"  
+    definition: "{{ lookup('template', 'deployment.yml.j2') }}"
+
+- name: Create Web Service
+  k8s:
+    state: present
+    kubeconfig: "{{ Kubeconfig }}"  
+    definition: "{{ lookup('template', 'service.yml.j2') }}"
