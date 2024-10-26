@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15" version="24.8.3">
   <diagram name="Page-1" id="0wS5V2P_4RKmM9Zy47Ww">
-    <mxGraphModel dx="794" dy="484" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1246" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -40,20 +40,20 @@
         <mxCell id="oSXGg_UFDsA07d1C8Wwd-23" value="Kubernetes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="686" y="265" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="oSXGg_UFDsA07d1C8Wwd-25" value="code push to repo" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout" vertex="1" parent="1">
-          <mxGeometry x="105" y="90" width="130" height="111.13" as="geometry" />
+        <mxCell id="oSXGg_UFDsA07d1C8Wwd-25" value="code push to repo" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="64" width="130" height="111.13" as="geometry" />
         </mxCell>
-        <mxCell id="oSXGg_UFDsA07d1C8Wwd-26" value="Gitlea runner will trigger build" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout" vertex="1" parent="1">
-          <mxGeometry x="260" y="80" width="121" height="100.25" as="geometry" />
+        <mxCell id="oSXGg_UFDsA07d1C8Wwd-26" value="Gitlea runner will trigger build" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="220" y="74.88" width="121" height="100.25" as="geometry" />
         </mxCell>
-        <mxCell id="oSXGg_UFDsA07d1C8Wwd-27" value="Image is build and pushed to docker hub" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout" vertex="1" parent="1">
-          <mxGeometry x="400" y="80" width="140" height="100" as="geometry" />
+        <mxCell id="oSXGg_UFDsA07d1C8Wwd-27" value="Image is build and pushed to docker hub" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="365" y="75" width="140" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="oSXGg_UFDsA07d1C8Wwd-28" value="&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp;Image Tag is updated in the playbook&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;align=center;" vertex="1" parent="1">
-          <mxGeometry x="560" y="85.13" width="150" height="90" as="geometry" />
+        <mxCell id="oSXGg_UFDsA07d1C8Wwd-28" value="&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp;Image Tag is updated in the playbook&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;align=center;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="150" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="oSXGg_UFDsA07d1C8Wwd-29" value="A trigger to run the playbook to deploy on Kubernetes" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout" vertex="1" parent="1">
-          <mxGeometry x="720" y="80" width="140" height="90" as="geometry" />
+        <mxCell id="oSXGg_UFDsA07d1C8Wwd-29" value="A trigger to run the playbook to deploy on Kubernetes" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="687" y="80" width="140" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
