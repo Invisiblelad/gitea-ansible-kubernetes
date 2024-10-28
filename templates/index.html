@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitea | DevOps Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section with Gitea Image -->
+        <div class="header">
+            <h1>Gitea</h1>
+            <p>Your Lightweight Code Hosting Solution</p>
+            <img src="{{ url_for('static', filename='gitea.gif') }}" alt="Gitea Logo" class="gitea-image">
+        </div>
+
+        <!-- About Gitea Section -->
+        <div class="section" id="about">
+            <h2>About Gitea</h2>
+            <p>
+                Gitea is a lightweight, self-hosted Git service, providing a powerful and streamlined code hosting solution. 
+                It offers a simple UI, support for issue tracking, code review, and CI/CD integration, making it a popular choice for DevOps workflows.
+            </p>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="section" id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Lightweight and self-hosted</li>
+                <li>Easy-to-use interface</li>
+                <li>Integrated issue tracking and code review</li>
+                <li>CI/CD compatible with popular DevOps tools</li>
+                <li>Supports SSH, HTTP/HTTPS protocols</li>
+            </ul>
+        </div>
+
+        <!-- Why Use Gitea Section -->
+        <div class="section" id="why-gitea">
+            <h2>Why Use Gitea?</h2>
+            <p>
+                Gitea is ideal for teams looking for a flexible, low-resource Git service. 
+                It’s open-source and extensible, allowing customization to fit your DevOps processes.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
