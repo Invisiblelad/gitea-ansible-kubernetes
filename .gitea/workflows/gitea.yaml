@@ -1,0 +1,52 @@
+name: Docker Build Demo
+run-name: ${{ github.actor }} is building a Docker image 🚀
+on: [push]
+
+jobs:
+  Build-Docker-Image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        run: |
+          docker build -t my-image:latest .          
+
+      - name: Login to Docker Registry
+        run: echo "${{ secrets.DOCKERPWD }}" | docker login -u "${{ secrets.DOCKERUSER }}" --password-stdin
+
+      - name: Push Docker image
+        run: |
+          docker tag my-image:latest "${{ secrets.DOCKERUSER }}/dev:latest"
+          docker push "${{ secrets.DOCKERUSER }}/dev:latest"          
+
+      - name: Install kubectl
+        run: |
+          curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl          
+
+      - name: Create Kubeconfig
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config          
+
+      - name: Install Ansible and Kubernetes Collection
+        run: |
+          sudo apt update
+          sudo apt install -y python3-pip
+          pip3 install ansible==10.5.0
+          pip3 install kubernetes
+          ansible-galaxy collection install community.kubernetes          
+
+      - name: Run Ansible Playbook
+        env:
+          KUBECONFIG_PATH: $HOME/.kube/config
+          KUBENAMESPACE: web
+          IMAGE_NAME: "${{ secrets.DOCKERUSER }}/dev:latest"
+        run: ansible-playbook -i inventory playbook.yml --extra-vars "Kubeconfig=$HOME/.kube/config namespace=web image_name=${{ secrets.DOCKERUSER }}/dev:latest"
